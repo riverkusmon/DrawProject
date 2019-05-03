@@ -8,14 +8,14 @@ public class DrawFrame extends JFrame
 	private static final long serialVersionUID = 3L;
 	
 	private DrawController app;
-	private DrawPanel pane;
+	private DrawAppPanel pane;
 	
 	public DrawFrame(DrawController app)
 	{
 		super();
 		
 		this.app = app;
-		pane = new DrawPanel();
+		pane = new DrawAppPanel(app);
 		
 		setupFrame();
 	}
@@ -23,6 +23,7 @@ public class DrawFrame extends JFrame
 	private void setupFrame()
 	{
 		this.setSize(1000, 800);
+		this.setContentPane(pane);
 		this.setResizable(false);
 		this.setVisible(true);
 	}
