@@ -56,7 +56,7 @@ public class DrawPanel extends JPanel
 			currentColor = randomColor();
 		}
 	}
-	
+	@Override
 	protected void PaintComponent(Graphics graphics)
 	{
 		super.paintComponent(graphics);
