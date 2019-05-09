@@ -1,5 +1,6 @@
 package draw.controller;
 
+import javax.swing.JOptionPane;
 import draw.view.DrawFrame;
 
 public class DrawController
@@ -13,7 +14,10 @@ public class DrawController
 	
 	
 	
-	
+	public void handleErrors(Exception error)
+	{
+		JOptionPane.showMessageDialog(frame, error.getMessage());
+	}
 	
 	public void start()
 	{

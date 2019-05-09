@@ -151,24 +151,30 @@ public class DrawAppPanel extends JPanel
 	{
 		canvas.addMouseListener(new MouseListener()
 		{
+			@Override
 			public void mouseClicked(MouseEvent e) 
 			{	
+				canvas.drawDot(e.getX(), e.getY(), widthSlider.getValue());
 			}
 			
 			public void mousePressed(MouseEvent e) 
 			{	
+				
 			}
-			
+			@Override
 			public void mouseReleased(MouseEvent e) 
 			{	
+				canvas.resetPoint();
 			}
-			
+			@Override
 			public void mouseEntered(MouseEvent e) 
 			{	
+				canvas.resetPoint();
 			}
-			
+			@Override
 			public void mouseExited(MouseEvent e) 
 			{	
+				canvas.resetPoint();
 			}
 			
 		});
